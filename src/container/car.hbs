@@ -1,0 +1,452 @@
+<div>
+  <button type="button" class="btn btn-outline-primary">
+    <h1>Car:</h1>
+  </button>
+  <div>Make: <em>{{make}}</em>;</div>
+  <div>Model: <em>{{model}}</em>;</div>
+  <div>Year: <em>{{year}}</em>;</div>
+  <div>Color: <em>{{color}}</em>;</div>
+
+  <br>
+  <hr>
+
+  <div>
+    <button type="button" class="btn btn-outline-danger">
+      <h2>Features:</h2>
+    </button>
+    <ul>
+      {{#with features}}
+      <br>
+      <li>
+        <button type="button" class="btn btn-outline-success">
+          <h3>Interior:</h3>
+        </button>
+        <ul>
+          {{#with interior}}
+          <br>
+          <div>
+            <li>
+              <button type="button" class="btn btn-outline-secondary">
+                <h4>Seats:</h4>
+              </button>
+              <ul>
+                {{#with seats}}
+                <li>
+                  <div>Material: <em>{{material}}</em>;</div>
+                </li>
+                <li>
+                  <div>Color: <em>{{color}}</em>;</div>
+                </li>
+                <li>
+                  <div>
+                    {{#if heated}}
+                    <div>Heated: + ;</div>
+                    {{else}}
+                    <div>Heated: - ;</div>
+                    {{/if}}
+                  </div>
+                </li>
+
+                <li>
+                  <div>
+                    {{#if ventilated}}
+                    <div>Ventilated: + ;</div>
+                    {{else}}
+                    <div>Ventilated: - ;</div>
+                    {{/if}}
+                  </div>
+                </li>
+                {{/with}}
+                <br>
+              </ul>
+            </li>
+
+            <li>
+              <button type="button" class="btn btn-outline-secondary">
+                <h4>Dashboard:</h4>
+              </button>
+              <ul>
+                {{#with dashboard}}
+                <li>
+                  <div>Material: <em>{{material}}</em>;</div>
+                </li>
+
+                <li>
+                  <div>Color: <em>{{color}}</em>;</div>
+                </li>
+
+                <li>
+                  <div>Display:</div>
+                  <ul>
+                    {{#with display}}
+                    <li>
+                      <div>Type: <em>{{type}}</em>;</div>
+                    </li>
+
+                    <li>
+                      <div>Size: <em>{{size}}</em>;</div>
+                    </li>
+
+                    <li>
+                      <div>Resolution: <em>{{resolution}}</em>;</div>
+                    </li>
+
+                    <li>
+                      <div>
+                        {{#if touchscreen}}
+                        <div>Touchscreen: + ;</div>
+                        {{else}}
+                        <div>Touchscreen: - ;</div>
+                        {{/if}}
+                      </div>
+                    </li>
+                    {{/with}}
+                    <br>
+                  </ul>
+                </li>
+                {{/with}}
+              </ul>
+            </li>
+
+            <li>
+              <button type="button" class="btn btn-outline-secondary">
+                <h4>Audio:</h4>
+              </button>
+              <ul>
+                {{#with audio}}
+                <li>
+                  <div>System: <em>{{system}}</em>;</div>
+                </li>
+
+                <li>
+                  <div>Speakers: <em>{{speakers}}</em>;</div>
+                </li>
+
+                <li>
+                  <div>
+                    {{#if subwoofer}}
+                    <div>Subwoofer: + ;</div>
+                    {{else}}
+                    <div>Subwoofer: - ;</div>
+                    {{/if}}
+                  </div>
+                </li>
+
+                <li>
+                  <div>
+                    {{#if bluetooth}}
+                    <div>Bluetooth: + ;</div>
+                    {{else}}
+                    <div>Bluetooth: - ;</div>
+                    {{/if}}
+                  </div>
+                </li>
+
+                <li>
+                  <div>
+                    {{#if USB}}
+                    <div>USB: + ;</div>
+                    {{else}}
+                    <div>USB: - ;</div>
+                    {{/if}}
+                  </div>
+                </li>
+                {{/with}}
+                <br>
+              </ul>
+            </li>
+          </div>
+          {{/with}}
+        </ul>
+      </li>
+
+      <br>
+      <hr>
+
+      <li>
+        <button type="button" class="btn btn-outline-info">
+          <h3>Exterior:</h3>
+        </button>
+        <br>
+        <br>
+        <ul>
+          {{#with exterior}}
+          <li>
+            <button type="button" class="btn btn-outline-warning">
+              <h4>Wheels:</h4>
+            </button>
+            <ul>
+              {{#with wheels}}
+              <li>
+                <div>Size: <em>{{size}}</em>;</div>
+              </li>
+
+              <li>
+                <div>Type: <em>{{type}}</em>;</div>
+              </li>
+              <li>
+                <div>Color: <em>{{color}}</em>;</div>
+              </li>
+              {{/with}}
+              <br>
+            </ul>
+          </li>
+
+          <li>
+            <button type="button" class="btn btn-outline-warning">
+              <h4>Headlights:</h4>
+            </button>
+            <ul>
+              {{#with headlights}}
+              <li>
+                <div>Type: <em>{{type}}</em>;</div>
+              </li>
+
+              <li>
+                <div>Brightness: <em>{{brightness}}</em>;</div>
+              </li>
+
+              <li>
+                <div>
+                  {{#if automatic}}
+                  <div>Automatic: + ;</div>
+                  {{else}}
+                  <div>Automatic: - ;</div>
+                  {{/if}}
+                </div>
+              </li>
+              {{/with}}
+            </ul>
+          </li>
+
+          <br>
+
+          <li>
+            <button type="button" class="btn btn-outline-warning">
+              <h4>Sunroof:</h4>
+            </button>
+            <ul>
+              {{#with sunroof}}
+              <li>
+                <div>Type: <em>{{type}}</em>;</div>
+              </li>
+
+              <li>
+                <div>Size: <em>{{size}}</em>;</div>
+              </li>
+
+              <li>
+                <div>
+                  {{#if automatic}}
+                  <div>Automatic: + ;</div>
+                  {{else}}
+                  <div>Automatic: - ;</div>
+                  {{/if}}
+                </div>
+              </li>
+              {{/with}}
+            </ul>
+          </li>
+          {{/with}}
+        </ul>
+      </li>
+
+      <br>
+      <hr>
+
+      <li>
+        <button type="button" class="btn btn-outline-success">
+          <h3>Safety:</h3>
+        </button>
+        <br>
+        <br>
+        <ul>
+          {{#with safety}}
+          <li>
+            <button type="button" class="btn btn-outline-dark">
+              <h4>Airbags:</h4>
+            </button>
+            <ul>
+              {{#with airbags}}
+              <li>
+                <div>Front: <em>{{front}}</em>;</div>
+              </li>
+
+              <li>
+                <div>Side: <em>{{side}}</em>;</div>
+              </li>
+
+              <li>
+                <div>Knee: <em>{{knee}}</em>;</div>
+              </li>
+
+              <li>
+                <div>Rear: <em>{{rear}}</em>;</div>
+              </li>
+              {{/with}}
+            </ul>
+          </li>
+
+          <br>
+
+          <li>
+            <button type="button" class="btn btn-outline-dark">
+              <h4>Assistance:</h4>
+            </button>
+            <ul>
+              {{#with assistance}}
+              <li>
+                {{#if blind_spot_monitoring}}
+                <div>Blind spot monitoring: + ;</div>
+                {{else}}
+                <div>Blind spot monitoring: - ;</div>
+                {{/if}}
+              </li>
+
+              <li>
+                {{#if rear_cross_traffic_alert}}
+                <div>Rear cross traffic alert: + ;</div>
+                {{else}}
+                <div>Rear cross traffic alert: - ;</div>
+                {{/if}}
+              </li>
+
+              <li>
+                {{#if lane_departure_warning}}
+                <div>Lane departure warning: + ;</div>
+                {{else}}
+                <div>Lane departure warning: - ;</div>
+                {{/if}}
+              </li>
+
+              <li>
+                {{#if adaptive_cruise_control}}
+                <div>Adaptive cruise control: + ;</div>
+                {{else}}
+                <div>Adaptive cruise control: - ;</div>
+                {{/if}}
+              </li>
+
+              <li>
+                {{#if collision_warning}}
+                <div>Collision warning: + ;</div>
+                {{else}}
+                <div>Collision warning: - ;</div>
+                {{/if}}
+              </li>
+              {{/with}}
+            </ul>
+          </li>
+          {{/with}}
+        </ul>
+      </li>
+      {{/with}}
+      <br>
+      <hr>
+    </ul>
+  </div>
+
+  <div>
+    <button type="button" class="btn btn-outline-primary">
+      <h2>Engine:</h2>
+    </button>
+    <ul>
+      {{#with engine}}
+      <li>
+        <div>Type: <em>{{type}}</em>;</div>
+      </li>
+
+      <li>
+        <div>Displacement: <em>{{displacement}}</em>;</div>
+      </li>
+
+      <li>
+        <div>Horsepower: <em>{{horsepower}}</em>;</div>
+      </li>
+
+      <li>
+        <div>Torque: <em>{{torque}}</em>;</div>
+      </li>
+
+      <li>
+        <div>Transmission:</div>
+        <ul>
+          {{#with transmission}}
+          <li>
+            <div>Type: <em>{{type}}</em>;</div>
+          </li>
+
+          <li>
+            <div>Gears: <em>{{gears}}</em>;</div>
+          </li>
+          {{/with}}
+        </ul>
+      </li>
+      {{/with}}
+      <br>
+      <hr>
+    </ul>
+  </div>
+
+  <div>
+    {{#with fuel_economy}}
+    <div class="list-group">
+      <button type="button" class="list-group-item list-group-item-action active" aria-current="true">
+        <h2>Fuel economy:</h2>
+      </button>
+      <button type="button" class="list-group-item list-group-item-action">
+        <div>City: <em>{{city}}</em>;</div>
+      </button>
+      <button type="button" class="list-group-item list-group-item-action">
+        <div>Highway: <em>{{highway}}</em>;</div>
+      </button>
+      <button type="button" class="list-group-item list-group-item-action">
+        <div>Combined: <em>{{combined}}</em>;</div>
+      </button>
+    </div>
+    {{/with}}
+    <br>
+    <hr>
+  </div>
+
+  <div>
+    <button type="button" class="btn btn-outline-success">
+      <h2>Price:</h2>
+    </button>
+    <ul>
+      {{#with price}}
+      <li>
+        <div>Base: <em>{{base}}</em>;</div>
+      </li>
+
+      <li>
+        <div>Destination: <em>{{destination}}</em>;</div>
+      </li>
+
+      <li>
+        <div>Options:</div>
+        <ul>
+          {{#with options}}
+          <li>
+            <div>Navigation: <em>{{navigation}}</em>;</div>
+          </li>
+
+          <li>
+            <div>Moonroof: <em>{{moonroof}}</em>;</div>
+          </li>
+
+          <li>
+            <div>Premium paint: <em>{{premium_paint}}</em>;</div>
+          </li>
+          {{/with}}
+        </ul>
+      </li>
+
+      <li>
+        <div>Total: <em>{{total}}</em>;</div>
+      </li>
+      {{/with}}
+      <br>
+    </ul>
+  </div>
+</div>
