@@ -1,0 +1,282 @@
+<div>
+  <h1>
+    <span class='badge bg-secondary'>
+      <strong>{{name}}</strong>
+      <div>Description: <em>{{description}}</em>;</div>
+      <div>Price: <em>{{price}}</em>;</div>
+      <div>Category: <em>{{category}}</em>;</div>
+    </span>
+  </h1>
+
+  <div>
+    {{#with features}}
+    <div>
+      <button type="button" class="btn btn-primary">
+        <h3>Features:</h3>
+      </button>
+      <ul>
+        <br>
+        <li>
+          <button type="button" class="btn btn-secondary">
+            <h4>Category:</h4>
+          </button>
+        </li>
+
+        <ul>
+          {{#with processor}}
+          <li>
+            <div>Brand: <em>{{brand}}</em>;</div>
+          </li>
+
+          <li>
+            <div>Model: <em>{{model}}</em>;</div>
+          </li>
+
+          <li>
+            <div>Speed: <em>{{speed}}</em>;</div>
+          </li>
+
+          <li>
+            <div>Cores: <em>{{cores}}</em>;</div>
+          </li>
+
+          <li>
+            <div>Cache: <em>{{cache}}</em>;</div>
+          </li>
+          {{/with}}
+          <br>
+          <hr>
+        </ul>
+
+        <li>
+          <button type="button" class="btn btn-success">
+            <h4>Memory:</h4>
+          </button>
+        </li>
+        <ul>
+          {{#with memory}}
+          <li>
+            <div>Type: <em>{{type}}</em>;</div>
+          </li>
+
+          <li>
+            <div>Size: <em>{{size}}</em>;</div>
+          </li>
+
+          <li>
+            <div>Speed: <em>{{speed}}</em>;</div>
+          </li>
+          {{/with}}
+          <br>
+          <hr>
+        </ul>
+
+        <li>
+          <button type="button" class="btn btn-danger">
+            <h4>Storage:</h4>
+          </button>
+        </li>
+
+        <ul>
+          {{#with storage}}
+          <li>
+            <div>Type: <em>{{type}}</em>;</div>
+          </li>
+
+          <li>
+            <div>Size: <em>{{size}}</em>;</div>
+          </li>
+          {{/with}}
+          <br>
+          <hr>
+        </ul>
+
+        <li>
+          <button type="button" class="btn btn-warning">
+            <h4>Display:</h4>
+          </button>
+        </li>
+
+        <ul>
+          {{#with display}}
+          <li>
+            <div>Size: <em>{{size}}</em>;</div>
+          </li>
+
+          <li>
+            <div>Resolution: <em>{{resolution}}</em>;</div>
+          </li>
+
+          <li>
+            <div>Technology: <em>{{technology}}</em>;</div>
+          </li>
+
+          <li>
+            <div>Color space: <em>{{color_space}}</em>;</div>
+          </li>
+
+          <li>
+            <div>Brightness: <em>{{brightness}}</em>;</div>
+          </li>
+
+          <li>
+            <div>Refresh rate: <em>{{refresh_rate}}</em>;</div>
+          </li>
+          {{/with}}
+          <br>
+          <hr>
+        </ul>
+
+        <li>
+          <button type="button" class="btn btn-info">
+            <h4>Graphics:</h4>
+          </button>
+        </li>
+
+        <ul>
+          {{#with graphics}}
+          <li>
+            <div>Brand: <em>{{brand}}</em>;</div>
+          </li>
+
+          <li>
+            <div>Model: <em>{{model}}</em>;</div>
+          </li>
+
+          <li>
+            <div>Memory: <em>{{memory}}</em>;</div>
+          </li>
+          {{/with}}
+          <br>
+          <hr>
+        </ul>
+
+        <li>
+          <button type="button" class="btn btn-dark">
+            <h4>Ports:</h4>
+          </button>
+        </li>
+
+        <ul>
+          {{#each ports}}
+          <li>
+            <div>Type: <em>{{type}}</em>;</div>
+          </li>
+
+          <li>
+            <div>Count: <em>{{count}}</em>;</div>
+          </li>
+
+          <div>
+            {{#if features}}
+            <li>Features:</li>
+            {{else}}
+            <li>Features: - ;</li>
+            {{/if}}
+            <ul>
+              {{#each features}}
+              <li>
+                <div>{{this}}</div>
+              </li>
+              {{/each}}
+            </ul>
+          </div>
+          <br>
+          {{/each}}
+          <hr>
+        </ul>
+
+        <li>
+          <button type="button" class="btn btn-outline-primary">
+            <h4>Battery:</h4>
+          </button>
+        </li>
+
+        <ul>
+          {{#with battery}}
+          <li>
+            <div>Type: <em>{{type}}</em>;</div>
+          </li>
+
+          <li>
+            <div>Capacity: <em>{{capacity}}</em>;</div>
+          </li>
+
+          <li>Life: <em>{{life}}</em>;</li>
+          {{/with}}
+          <br>
+          <hr>
+        </ul>
+
+        <li>
+          <button type="button" class="btn btn-outline-secondary">
+            <h4>Weight:</h4>
+          </button>
+        </li>
+
+        <ul>
+          <li>
+            <div>Weight: <em>{{weight}}</em>;</div>
+          </li>
+          <br>
+          <hr>
+        </ul>
+
+        <li>
+          <button type="button" class="btn btn-outline-success">
+            <h4>Dimensions:</h4>
+          </button>
+        </li>
+
+        <ul>
+          {{#with dimensions}}
+          <li>
+            <div>Height: <em>{{height}}</em>;</div>
+          </li>
+
+          <li>
+            <div>Width: <em>{{width}}</em>;</div>
+          </li>
+
+          <li>
+            <div>Depth: <em>{{depth}}</em>;</div>
+          </li>
+          {{/with}}
+          <br>
+          <hr>
+        </ul>
+
+        <li>
+          <button type="button" class="btn btn-outline-warning">
+            <h4>Operating system:</h4>
+          </button>
+        </li>
+
+        <ul>
+          <li>
+            <div>Operating system: <em>{{operating_system}}</em>;</div>
+          </li>
+          <br>
+          <hr>
+        </ul>
+
+        <li>
+          <button type="button" class="btn btn-outline-info">
+            <h4>Accessories:</h4>
+          </button>
+        </li>
+
+        <ul>
+          {{#each accessories}}
+          <li>
+            <div>Name: <em>{{name}}</em>;</div>
+            <div>Price: <em>{{price}}</em>;</div>
+          </li>
+          <br>
+          {{/each}}
+        </ul>
+      </ul>
+    </div>
+    {{/with}}
+  </div>
+</div>
