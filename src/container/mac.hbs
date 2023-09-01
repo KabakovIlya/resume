@@ -1,0 +1,20 @@
+<div>
+  <h1>
+    <span class='badge bg-secondary'>
+      <strong>{{name}}</strong>
+      <div>Description: <em>{{description}}</em>;</div>
+      <div>Price: <em>{{price}}</em>;</div>
+      <div>Category: <em>{{category}}</em>;</div>
+    </span>
+  </h1>
+
+  <div>
+    {{#with features}}
+    <div>
+      {{#with processor}}
+      <div>Brand: <em>{{brand}}</em>;</div>
+      {{/with}}
+    </div>
+    {{/with}}
+  </div>
+</div>
