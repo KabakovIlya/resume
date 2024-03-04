@@ -1854,3 +1854,22 @@ router.get('/shophome', function (req, res) {
 })
 // Підключаємо роутер до бек-енду
 module.exports = router
+
+
+// ================================================================
+
+//           ↙ тут вводимо шлях (PATH) до сторінки
+router.get('/bootstrap2', function (req, res) {
+  // res.render генерує нам HTML сторінку
+
+  //            ↙ cюди вводимо назву файлу з сontainer
+  res.render('bootstrap2', {
+    layout: 'bootstrap',
+  })
+  //                  ↑↑ сюди вводимо JSON дані
+})  
+
+
+
+
+// ================================================================
