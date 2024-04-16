@@ -1,0 +1,145 @@
+<main class="p-5">
+    <div class="row">
+        <div class="col-12">
+            <div class="card mb-5">
+                <div class="nav">
+                    {{#with navigation}}
+                    {{#each links}}
+                    <a href="{{href}}" class="nav-link pt-3 pb-3">{{text}}</a>
+                    {{/each}}
+                    {{/with}}
+                </div>
+            </div>
+        </div>
+
+        <div>
+            {{#with header}}
+            <h1 class="mb-3">{{title}}</h1>
+
+            <div>
+                {{#with button}}
+                <a href="{{link}}">
+                    <button class="btn btn-outline-secondary">{{text}}</button>
+                </a>
+                {{/with}}
+            </div>
+            {{/with}}
+        </div>
+
+        <div class="mt-5 mb-5">
+            <hr>
+        </div>
+
+        <div>
+            {{>cartGoodsItem}}
+        </div>
+
+        <div class="mt-5 mb-5">
+            <hr>
+        </div>
+
+        <div class="col-4">
+            {{#with total}}
+            <h2>{{title}}</h2>
+            <div class="display-6">{{amount}}</div>
+            <div class="mt-2">{{delivery}}</div>
+            <div>
+                {{#each buttons}}
+                <a href="{{link}}">
+                    <button class="
+                    {{#if isSuccess}}
+                    btn btn-success mt-4
+                    {{/if}}
+
+                    {{#if isOutline}}
+                    btn btn-outline-success mt-3
+                    {{/if}}
+                    ">{{text}}</button>
+                </a>
+                {{/each}}
+            </div>
+            {{/with}}
+        </div>
+
+        <div class="mt-5 mb-5">
+            <hr>
+        </div>
+
+        <div>
+            {{#with goodsOtherBlock}}
+            <h2 class="text-center">{{title}}</h2>
+
+            <div class="col-12 mt-3">
+                <div class="row">
+                    {{#each cards}}
+                    <div class="col-4">
+                        <div class="card">
+                            <img class="card-top" src="{{image}}" alt="Product photo">
+                            <div class="card-body p-2">
+                                <h5>{{title}}</h5>
+                                {{#if isHot}}
+                                <span class="badge text-bg-warning rounded-pill text-uppercase">Hot</span>
+                                {{/if}}
+
+                                {{#if isHot}}
+                                <span class="badge text-bg-primary rounded-pill">New</span>
+                                {{/if}}
+                                <div>{{description}}</div>
+                            </div>
+                        </div>
+                    </div>
+                    {{/each}}
+                </div>
+            </div>
+            {{/with}}
+        </div>
+
+        <div class="mt-5 mb-5">
+            <hr>
+        </div>
+
+        <div class="col-12">
+            {{#with subscribe}}
+            <div class="card text-bg-secondary p-2">
+                <h2>{{header}}</h2>
+                <div class="mb-3">{{description}}</div>
+
+
+                <div>
+                    {{#each buttons}}
+                    <div class="col-3 mt-2">
+                        <a href="{{link}}">
+                            <button class="btn btn-primary">{{text}}</button>
+                        </a>
+                    </div>
+                    {{/each}}
+                </div>
+            </div>
+            {{/with}}
+        </div>
+
+        <div class="mt-5 mb-5">
+            <hr>
+        </div>
+
+        <footer>
+            <section class="col-12">
+                <div class="row">
+                    {{#each footer}}
+                    {{#each this}}
+                    <div class="nav col-3">
+                        <div class="nav-item">
+                            <a href="{{link}}" class="nav-link
+                            {{#if isDisabled}}
+                            disabled
+                            {{/if}}
+                            ">{{text}}</a>
+                        </div>
+                    </div>
+                    {{/each}}
+                    {{/each}}
+                </div>
+            </section>
+        </footer>
+    </div>
+</main>
