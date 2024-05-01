@@ -1,0 +1,71 @@
+<div>
+    {{#each reviewList}}
+    <div class="pb-5">
+        <div class="card">
+            <div class="card ms-3 mt-2 mb-2 me-3">
+                {{#with title}}
+                <b class="ms-2 mt-1">{{userName}}</b>
+                <div class="ms-2 mb-1">{{caption}}</div>
+                <div class="ms-2">{{date}}</div>
+                {{/with}}
+
+                <hr>
+
+                <div>
+                    {{#with reviewBody}}
+                    <div>
+                        {{#with seller}}
+                        <div class="ms-2 mb-3">{{title}}: {{value}}</div>
+                        {{/with}}
+                    </div>
+
+                    <div>
+                        {{#with rating}}
+                        <div class="ms-2 mb-3">{{title}}: {{value}}</div>
+                        {{/with}}
+                    </div>
+
+                    <div>
+                        {{#each text}}
+                        <div class="ms-2 me-2 mb-3">{{this}}</div>
+                        {{/each}}
+                    </div>
+
+                    <div>
+                        {{#with advantages}}
+                        <b class="ms-2">{{title}}:</b>
+                        <div class="ms-2 mb-3">{{text}}</div>
+                        {{/with}}
+                    </div>
+
+                    <div>
+                        {{#with disadvantages}}
+                        <b class="ms-2">{{title}}:</b>
+                        <div class="ms-2 mb-3">{{text}}</div>
+                        {{/with}}
+                    </div>
+
+                    <div>
+                        {{#each images}}
+                        <img class="ms-2 me-2 mb-2" src="{{this}}">
+                        {{/each}}
+                    </div>
+                    {{/with}}
+                </div>
+            </div>
+
+            <div>
+                {{#each coments}}
+                <div class="ms-5 mt-3 mb-3 me-3">
+                    <div class="card">
+                        <b class="ms-2 mt-2 mb-1">{{userName}}</b>
+                        <div class="ms-2 mb-1">{{date}}</div>
+                        <div class="ms-2 mb-2">{{text}}</div>
+                    </div>
+                </div>
+                {{/each}}
+            </div>
+        </div>
+    </div>
+    {{/each}}
+</div>
